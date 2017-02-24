@@ -34,6 +34,6 @@ issued:
   - 2015
   - 6
   - 18
-pdf: http://proceedings.mlr.press/v43/frontmatter/frontmatter.pdf
+pdf: http://proceedings.mlr.press/v43/frontmatter.pdf
 # Format based on citeproc: http://blog.martinfenner.org/2013/07/30/citeproc-yaml-for-bibliographies/
 ---
