@@ -7,9 +7,9 @@ layout: inproceedings
 series: Proceedings of Machine Learning Research
 id: frontmatter
 month: 0
-firstpage: 0
-lastpage: 0
-page: 0-0
+firstpage: i
+lastpage: vii
+page: i-vii
 sections: 
 author:
 - given: Heriberto
