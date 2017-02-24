@@ -1,0 +1,55 @@
+---
+booktitle: Proceedings of The 4th Workshop on Machine Learning for Interactive Systems
+  at ICML 2015
+volume: 43
+year: '2015'
+shortname: MLIS
+published: 2015-06-18
+start: 2015-07-11
+end: 2015-07-11
+sections:
+- name: front
+  title: Frontmatter
+- name: default
+  title: Accepted Papers
+layout: proceedings
+series: Proceedings of Machine Learning Research
+id: MLIS-2015
+month: 0
+abstract: ''
+editor:
+- given: Heriberto
+  family: Cuayáhuitl
+- given: Nina
+  family: Dethlefs
+- given: Lutz
+  family: Frommberger
+- given: Martijn
+  family: Van Otterlo
+- given: Olivier
+  family: Pietquin
+title: Proceedings of The 4th Workshop on Machine Learning for Interactive Systems
+  at ICML 2015
+email: ''
+description: Proceedings of The 4th Workshop on Machine Learning for Interactive Systems
+  at ICML 2015, Lille, France
+url: http://proceedings.mlr.press
+baseurl: "/v43"
+twitter_username: mlresearch
+github_username: mlresearch
+markdown: kramdown
+permalink: "/:title.html"
+github:
+  edit: true
+  repository: v43
+conference:
+  name: Machine Learning for Interactive Systems
+  url: 
+  location: Lille, France
+  dates:
+  - 2015-07-11
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+# Site settings
+# Auto generated from v43.bib

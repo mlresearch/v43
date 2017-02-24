@@ -1,299 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>MLIS 2015 | JMLR W&amp;CP</title>
+---
+layout: default
+---
 
-	<!-- Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../css/jmlr.css" />
+<div id="content" class="home">
 
-	<!-- Fixed position navigation -->
-	<!--#include virtual="/proceedings/css-scroll.txt"-->
+  <h1>Proceedings of Machine Learning Research</h1>
+  <h2>Volume {{ site.volume }}: {{ site.conference.name }}, {{ site.conference.dates.first | date: "%B %-d" }} to {{ site.conference.dates.last | date: "%B %-d, %Y" }}, {{ site.conference.location }}</h2>
+  {% if site.github.edit %}
+  <p align="right">[<a href="https://github.com/{{ site.github_username }}/{% if site.github.repository %}{{ site.github.repository }}{% else %}{{ site.baseurl }}{% endif %}/edit/{% if site.github.repository contains 'github.io' %}master{% else %}gh-pages{% endif %}/_config.yml">edit</a>]</p>
+  {% endif %}
 
-	<!-- MathJax -->
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+  <p><strong>Editors:
+      {% assign lastone = site.editor | last %}
+      {% for person in site.editor %}
+      {% include listperson.html %}
+      {% endfor %}
+  </strong></p>
+  <p>[<a href="./bibliography.bib">bib</a>][<a href="./citeproc.yaml">citeproc</a>]</p>
+  <div id="sectionnav">
+    {% if site.sections %}
+    <p>Contents:</p>
+    <ul>
+      {% for section in site.sections %}
+      <li><a href="#{{ section.name }}">{{ section.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <label for="search-authors">Filter Authors:</label>
+    <input type="search" name="filter-authors" id="search-authors" value />
+    <label for="search-titles">Filter Titles:</label>
+    <input type="search" name="filter-titles" id="search-titles" value />
+  </div>
+  {% if site.sections %}
+  {% for section in site.sections %}
+  <h3 id="{{ section.name }}">{{ section.title }}</h3>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+    {% if section.name == post.section %}
+    {% include listpaper.html %}
+    {% endif %}
+    {% endfor %}
+  </dl>
+  {% endfor %}
+  {% endif %}
+  <dl>
+  {% assign sorted = (site.posts | sort: 'firstpage') %}
+  {% for post in sorted %}
+  {% unless post.section %} 
+  {% include listpaper.html %}
+  {% endunless %}
+  {% endfor %}
 
-
-</head>
-<body>
-
-<div id="fixed">
-<!--#include virtual="/proceedings/nav-bar.txt"-->
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  
 </div>
-
-<div id="content">
-	<h1>JMLR Workshop and Conference Proceedings</h1>
-	<h2>Volume 43: Proceedings of The 4th Workshop on Machine Learning for Interactive Systems</h2>
-
-	<p><strong>Editors: 
-	
-		Heriberto Cuayáhuitl,
-	
-		Nina Dethlefs,
-	
-		Lutz Frommberger,
-	
-		Martijn Van Otterlo,
-	
-		Olivier Pietquin
-    </strong>
-	
-	</p>
-
-	
-
-	<div id="sectionnav">
-		<p>Contents:</p>
-		<ul>
-		
-			<li><a href="#front">Frontmatter</a></li>
-		
-			<li><a href="#default">Accepted Papers</a></li>
-		
-		</ul>
-
-		<label for="search-authors">Filter Authors:</label>
-		<input type="search" name="filter-authors" id="search-authors" value />
-		<label for="search-titles">Filter Titles:</label>
-		<input type="search" name="filter-titles" id="search-titles" value />
-	</div>
-
-	
-	<h3 id="front">Frontmatter</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">Proceedings of the 4th Workshop on Machine Learning for Interactive Systems (MLIS-2015)</p>
-	<p class="details">
-	<span class="authors">
-		
-			Heriberto Cuayáhuitl,
-		
-			Nina Dethlefs,
-		
-			Lutz Frommberger,
-		
-			Martijn Van Otterlo,
-		
-			Olivier Pietquin
-	</span>
-	</p>
-	<p class="links">
-		[<a href="frontmatter.html">abs</a>]
-		[<a href="frontmatter.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-	<h3 id="default">Accepted Papers</h3>
-
-	<dl>
-		
-			<div class="paper">
-	<p class="title">Imitation Learning Applied to Embodied Conversational Agents</p>
-	<p class="details">
-	<span class="authors">
-		
-			Piot Bilal,
-		
-			Olivier Pietquin,
-		
-			Matthieu Geist
-	</span>
-	</p>
-	<p class="links">
-		[<a href="piot15.html">abs</a>]
-		[<a href="piot15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Efficient Real-Time Pixelwise Object Class Labeling for Safe Human-Robot Collaboration in Industrial Domain</p>
-	<p class="details">
-	<span class="authors">
-		
-			Vivek Sharma,
-		
-			Frank Dittrich,
-		
-			Sule Yildirim-Yayilgan,
-		
-			Luc Van Gool
-	</span>
-	</p>
-	<p class="links">
-		[<a href="sharma15.html">abs</a>]
-		[<a href="sharma15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Human-Guided Learning of Social Action Selection for Robot-Assisted Therapy</p>
-	<p class="details">
-	<span class="authors">
-		
-			Emmanuel Senft,
-		
-			Paul Baxter,
-		
-			Tony Belpaeme
-	</span>
-	</p>
-	<p class="links">
-		[<a href="senft15.html">abs</a>]
-		[<a href="senft15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Teaching iCub to recognize objects using deep Convolutional Neural Networks</p>
-	<p class="details">
-	<span class="authors">
-		
-			Giulia Pasquale,
-		
-			Carlo Ciliberto,
-		
-			Francesca Odone,
-		
-			Lorenzo Rosasco,
-		
-			Lorenzo Natale
-	</span>
-	</p>
-	<p class="links">
-		[<a href="pasquale15.html">abs</a>]
-		[<a href="pasquale15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Latent Goal Analysis for Dimension Reduction in Reinforcement Learning</p>
-	<p class="details">
-	<span class="authors">
-		
-			Matthias Rolf,
-		
-			Minoru Asada
-	</span>
-	</p>
-	<p class="links">
-		[<a href="rolf15.html">abs</a>]
-		[<a href="rolf15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Online Mean Field Approximation for Automated Experimentation</p>
-	<p class="details">
-	<span class="authors">
-		
-			Shaona Ghosh,
-		
-			Adam Prügel-Bennett
-	</span>
-	</p>
-	<p class="links">
-		[<a href="ghosh15.html">abs</a>]
-		[<a href="ghosh15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Iterative Embedding with Robust Correction using Feedback of Error Observed</p>
-	<p class="details">
-	<span class="authors">
-		
-			Praneeth Vepakomma,
-		
-			Ahmed Elgammal
-	</span>
-	</p>
-	<p class="links">
-		[<a href="vepakomma15.html">abs</a>]
-		[<a href="vepakomma15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Coactive Learning for Interactive Machine Translation</p>
-	<p class="details">
-	<span class="authors">
-		
-			Artem Sokolov,
-		
-			Stefan Riezler,
-		
-			Shay B. Cohen
-	</span>
-	</p>
-	<p class="links">
-		[<a href="sokolov15.html">abs</a>]
-		[<a href="sokolov15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-			<div class="paper">
-	<p class="title">Visualizing User Model in Exploratory Search Tasks</p>
-	<p class="details">
-	<span class="authors">
-		
-			Kalle Ilves,
-		
-			Alan Medlar,
-		
-			Dorota Glowacka
-	</span>
-	</p>
-	<p class="links">
-		[<a href="ilves15.html">abs</a>]
-		[<a href="ilves15.pdf">pdf</a>]
-		
-		
-	</p>
-</div>
-
-		
-	</dl>
-	
-
-</div> <!-- content -->
-	<!-- Search Widget -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="../js/search.js"></script>
-</body>
-</html>
+<!-- Search Widget -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="../js/search.js"></script>
