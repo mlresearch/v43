@@ -46,6 +46,7 @@ description: |
   Series Editors:
     Neil D. Lawrence
     Mark Reid
+date_str: 11 Jul
 url: http://proceedings.mlr.press
 baseurl: "/v43"
 twitter_username: mlresearch
@@ -55,6 +56,7 @@ permalink: "/:title.html"
 github:
   edit: true
   repository: v43
+bibtex_copy: true
 email: ''
 conference:
   name: Machine Learning for Interactive Systems
