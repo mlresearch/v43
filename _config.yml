@@ -17,6 +17,8 @@ series: Proceedings of Machine Learning Research
 id: MLIS-2015
 month: 0
 abstract: ''
+tex_title: 
+title: Proceedings of Machine Learning Research
 editor:
 - given: Heriberto
   family: Cuayáhuitl
@@ -28,7 +30,6 @@ editor:
   family: Van Otterlo
 - given: Olivier
   family: Pietquin
-title: Proceedings of Machine Learning Research
 description: |
   Proceedings of The 4th Workshop on Machine Learning for Interactive Systems at ICML 2015
     Held in Lille, France on 11 July 2015

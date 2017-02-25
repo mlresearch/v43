@@ -7,6 +7,8 @@ layout: inproceedings
 series: Proceedings of Machine Learning Research
 id: frontmatter
 month: 0
+tex_title: Proceedings of the 4th Workshop on Machine Learning for Interactive Systems
+  (MLIS-2015)
 firstpage: i
 lastpage: vii
 page: i-vii
