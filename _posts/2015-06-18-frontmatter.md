@@ -12,7 +12,8 @@ tex_title: Proceedings of the 4th Workshop on Machine Learning for Interactive S
 firstpage: i
 lastpage: vii
 page: i-vii
-sections: 
+order: 0
+cycles: false
 author:
 - given: Heriberto
   family: Cuayáhuitl

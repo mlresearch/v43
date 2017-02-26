@@ -19,6 +19,7 @@ month: 0
 abstract: ''
 tex_title: 
 title: Proceedings of Machine Learning Research
+cycles: false
 editor:
 - given: Heriberto
   family: Cuayáhuitl
@@ -56,9 +57,12 @@ permalink: "/:title.html"
 github:
   edit: true
   repository: v43
-bibtex_copy: true
-endnote_copy: true
-apa_copy: true
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
 email: ''
 conference:
   name: Machine Learning for Interactive Systems
