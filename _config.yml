@@ -16,9 +16,6 @@ layout: proceedings
 series: Proceedings of Machine Learning Research
 id: MLIS-2015
 month: 0
-abstract: ''
-tex_title: 
-title: Proceedings of Machine Learning Research
 cycles: false
 editor:
 - given: Heriberto
@@ -31,6 +28,7 @@ editor:
   family: Van Otterlo
 - given: Olivier
   family: Pietquin
+title: Proceedings of Machine Learning Research
 description: |
   Proceedings of The 4th Workshop on Machine Learning for Interactive Systems at ICML 2015
     Held in Lille, France on 11 July 2015
@@ -50,7 +48,7 @@ description: |
 date_str: 11 Jul
 url: http://proceedings.mlr.press
 baseurl: "/v43"
-twitter_username: mlresearch
+twitter_username: MLResearchPress
 github_username: mlresearch
 markdown: kramdown
 permalink: "/:title.html"
@@ -62,6 +60,7 @@ display:
     bibtex: true
     endnote: true
     apa: true
+    ris: true
   comments: false
 email: ''
 conference:
@@ -75,3 +74,4 @@ analytics:
     tracking_id: UA-92432422-1
 # Site settings
 # Auto generated from v43.bib
+---
